@@ -1,0 +1,4 @@
+Async ve await aslında yeni bir konsept değil. es-6 ile gelen fetch ve promiseleri daha efektif biçimde kullanmak için es-7 ile bu iki anahtar kullanıma sunuldu. 
+
+async anahtarını kullanırsak bir fonksiyonun mutlaka promise döneceğini belirtir. 
+await anahtarı kelimesi bir promisin resolve etmeisini ( olumlu sonuç dönmesini ) bekletir. 

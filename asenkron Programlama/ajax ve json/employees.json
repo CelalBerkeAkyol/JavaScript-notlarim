@@ -1,0 +1,22 @@
+[
+
+    {
+        "name":"celal berke akyol",
+        "department":"bilişim",
+        "salary":4000
+    },
+
+    {
+        "name":"irem biler ",
+        "department":"endüstri",
+        "salary":6000
+    },
+
+    {
+        "name":"nazmican doğanay",
+        "department":"emlak",
+        "salary":2000
+    }
+
+
+]

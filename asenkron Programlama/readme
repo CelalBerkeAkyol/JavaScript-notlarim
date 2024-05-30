@@ -1,0 +1,19 @@
+bir istekte bulunduğumuzda cevap iki farklı şekilde iletilebilir 
+senkron 
+asenkron 
+---
+senkron yöntemde yaptığımız istek cevaplanmadan diğer istekler cevaplanmaz. İstekler sıraya girer ve sırası gelmeyen istek bekletilir.
+asenkron yöntemde ise istekler belli bir sıraya göre yapılmaz. Her istek geldiği gibi cevaplanmaya başlar. 
+Birden çok kullanıcının aynı anda birden çok işlem yaptığı uygulamarlada asenkron yöntemi kullanmak gerekir. 
+Bu kursta asenkron programlamayı öğreneceğiz. 
+
+--- 
+bazı terimleri anlayalım 
+
+json = insanlar tarafından okunabilen bir veri formatıdır. veri değişimi için kullanılır. JSON hem sunucu hem de istemci tarafında yaygın olarak kullanılır. 
+xml de aynı json gibidir fakat daha eski teknolojidir. JSON xmle göre alan tasarufu sağlar. 
+
+JSON Kullanım Alanları
+Web Servisleri: JSON, web servislerinde veri transferi için yaygın olarak kullanılır. RESTful API'lar genellikle JSON formatında veri alır ve gönderir.
+Veri Depolama: JSON, hafif bir veri formatı olarak yapılandırılmış veri depolama için kullanılabilir.
+Konfigürasyon Dosyaları: Uygulama ayarlarının saklandığı konfigürasyon dosyaları olarak kullanılabilir.
