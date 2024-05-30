@@ -1,0 +1,1 @@
+// sonuc buradan ekrana yazdırılacak ve manipüle edilecek
