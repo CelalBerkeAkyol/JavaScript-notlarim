@@ -49,3 +49,7 @@ Diyelim ki modern JavaScript özelliklerini (ES6+), SCSS ile yazılmış stiller
 3. **Modüller**: Kodunuzu modüller halinde yazarsınız ve bunları `import`/`export` veya `require`/`module.exports` ile organize edersiniz. Webpack bu modülleri analiz eder ve bağımlılıklarına göre paketler.
 
 Bu şekilde, Babel ve Webpack kullanarak modern JavaScript projelerinizi hem gelişmiş hem de eski tarayıcılarla uyumlu hale getirirsiniz.
+
+
+NOT 
+node_modulleri yüklemesi githuba çok zor olacağı için sildim. npm install komutu ile package.json üzerindeki dependencies otomatik olarak indirilecektir. 
