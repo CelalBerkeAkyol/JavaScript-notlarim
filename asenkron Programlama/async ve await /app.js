@@ -32,3 +32,4 @@ async function getCurrency(url){
 }
 getCurrency("http://api.exchangeratesapi.io/v1/latest?access_key=MY-ACCES-KEY");
 
+// then ve catch gibi çalışıyorlar 

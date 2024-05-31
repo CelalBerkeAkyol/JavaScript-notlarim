@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // callback kullanımını daha kolay okunabilir ve anlaşılabilir hale getirmek için ortaya çıkmış bir objedir.
+      // olumlu ve olumsuz durumlar için iki parametre alır genellikle resolve, reject olarak adlandırılırlar.
+      const serverStatus = true;
+      const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (serverStatus) {
+            // if bloğu çalışırsa resolve fonksiyonu çalışır
+            resolve({ username: "Döndürülen değer " });
+          } else {
+            //else bloğu çalışırsa reject fonksiyonu çalışır
+            reject("eror döndürülür");
+          }
+        }, 1000);
+      });
+      promise
+        .then((birinci) => {
+          console.log(birinci);
+          console.log("main html dosyasındaki script dosyalarıdır bunlar **********************")
+        })
+        .catch((err) => console.error(err));
+        
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
