@@ -1,0 +1,10 @@
+{
+  "employees": [
+    {
+      "id": "a5e0",
+      "name": "celal berke akyol",
+      "department": "bilgisayar müh",
+      "salary": "12000"
+    }
+  ]
+}

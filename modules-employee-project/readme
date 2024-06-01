@@ -1,0 +1,16 @@
+json server global olarak kurulurken hata alındı ( eacces) -g komutu kullanımı izinli değildi 
+bunu çözmek için birkaç yöntem var 
+sudo kullanarak kodu çalıştırabilirdik ( bu da hata verdi )
+    =>sudo npm install -g json-server
+2. NPM Küresel Paket Yükleme Dizininin İzinlerini Değiştirmek
+a. Küresel Paket Yükleme Dizininizi Bulun
+    =>npm config get prefix
+b. Bu Dizin İçin Sahipliği Değiştirin
+Dizin sahipliğini değiştirerek bu dizine yazma izni verin. Aşağıdaki komutları kendi kullanıcı adınızla çalıştırın (bu örnekte your-username ile):
+    =>sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+
+****************** 
+Asıl çalıştırmayı başardığım kod : 
+3. npx Kullanarak Yerel Kurulum
+npm install json-server --save-dev
+npx json-server --watch db.json

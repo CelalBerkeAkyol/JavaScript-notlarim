@@ -53,3 +53,24 @@ Bu şekilde, Babel ve Webpack kullanarak modern JavaScript projelerinizi hem gel
 
 NOT 
 node_modulleri yüklemesi githuba çok zor olacağı için sildim. npm install komutu ile package.json üzerindeki dependencies otomatik olarak indirilecektir. 
+
+Terser hatası 
+ Terser tarafından sıkıştırma (minification) işlemi yapılırken oluşuyor ve kripto (crypto) modülüyle ilgili bir sorun olduğunu belirtiyor. Node.js'in yeni sürümleriyle (özellikle Node.js 17 ve üzeri) gelen bazı değişiklikler nedeniyle bu tür hatalar yaygınlaşmıştır. Bu tür bir hatayla karşılaştığınızda, genellikle Node.js sürümünüzle ilgili bir uyumsuzluk ya da yapılandırma hatası olabilir.
+ Çözüm Yöntemleri
+1. Node.js Sürümünü Düşürmek
+Node.js'in daha stabil ve yaygın kullanılan sürümlerinden birine geri dönmek sorunu çözebilir. Örneğin, Node.js 16 LTS sürümünü kullanmak bu tür sorunları genellikle ortadan kaldırır.
+
+Node.js 16'yı kullanmak için:
+nvm install 16
+nvm use 16
+----
+2. OpenSSL Legacy Provider Kullanmak
+Node.js 17 ve üstü sürümlerle birlikte gelen bu tür hataları aşmak için OpenSSL legacy provider kullanabilirsiniz.
+Aşağıdaki komutları terminalde çalıştırarak bu sağlayıcıyı etkinleştirebilirsiniz:
+export NODE_OPTIONS=--openssl-legacy-provider
+veya packege.json da
+"scripts": {
+  "build": "export NODE_OPTIONS=--openssl-legacy-provider && webpack --progress"
+}
+
+2. yöntem olan export NODE_OPTIONS=--openssl-legacy-provider terminalde çalıştırarak işi çözüm
